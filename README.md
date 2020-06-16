@@ -64,3 +64,12 @@ Furthermore, below you can find the supported modes:
 </ul>
 <br/><br/>
 <h1 id="screens">Screenshots</h1>
+A view of the help menu:
+<img src="images/help_menu.png">
+<br/>
+A view of the top of both PE and ELF file structure extractions:
+<img src="images/file_extract_top.png">
+<img src="images/file_extract_elf_top.png">
+<br/>
+A view of a disassembled SparcV8 binary:
+<img src="images/sparc_disassemble.png">
