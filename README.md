@@ -4,7 +4,12 @@ Disassimpl is a simple, multi-architecture (or at least it is uspposed to be), m
 <br/><br/>
 Please note, a large portion of this utility has not been tested, and some architectures may not even disassemble correctly. Considering this entire project is ~500 lines, I am even more confident it will break on some challenges. Furthermore, this isn't even a stable <i>release.</i> I still have concepts in mind that shall be added, so I wouldn't even call this version 1.0; it will likely stay this way for a bit. The only well-tested portion of Disassimpl's functionality is the extraction of the file structure from binaries, but the disassembly function is largely untested (and visibly misbehaves on PPC and MIPS-esc architectures).
 <br/><br/>
-<h1>Supported Modes & Architectures</h1>
+<h1>Table of Contents</h1>
+<ul>
+  <li><a href="#supported">Supported Modes & Architectures</a></li>
+</ul>
+<br/><br/>
+<h1 id="supported">Supported Modes & Architectures</h1>
 As stated above, Disassimpl is supposed to support multiple architectures. Below is the list of supposedly supported architectures:
 <ul>
   <li>ARM         | ARM architecture (including Thumb, Thumb-2)</li>
