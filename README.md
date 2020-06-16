@@ -69,6 +69,7 @@ A view of the help menu:
 <br/>
 A view of the top of both PE and ELF file structure extractions:
 <img src="images/file_extract_top.PNG">
+<img src="images/image.png">
 <img src="images/file_extract_elf_top.PNG">
 <br/>
 A view of a disassembled SparcV8 binary:
