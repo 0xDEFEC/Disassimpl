@@ -7,6 +7,7 @@ Please note, a large portion of this utility has not been tested, and some archi
 <h1>Table of Contents</h1>
 <ul>
   <li><a href="#supported">Supported Modes & Architectures</a></li>
+  <li><a href="#screens">Screenshots</a></li>
 </ul>
 <br/><br/>
 <h1 id="supported">Supported Modes & Architectures</h1>
@@ -61,3 +62,5 @@ Furthermore, below you can find the supported modes:
   <li>M680XCPU12  | M680X Motorola/Freescale/NXP CPU12</li>
   <li>M680XHCS08  | M680X Freescale/NXP HCS08 mode</li>
 </ul>
+<br/><br/>
+<h1 id="screens">Screenshots</h1>
