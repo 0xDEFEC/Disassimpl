@@ -67,7 +67,7 @@ Furthermore, below you can find the supported modes:
 A view of the help menu:
 <img src="images/help_menu.PNG">
 <br/>
-A view of a PE and ELF file structure extractions:
+A view of PE and ELF file structure extractions:
 <img src="images/file_extract_top.PNG">
 <img src="images/file_extract_middle.PNG">
 <img src="images/file_extract_elf_top.PNG">
