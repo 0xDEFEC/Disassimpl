@@ -22,37 +22,37 @@ As stated above, Disassimpl is supposed to support multiple architectures. Below
 </ul>
 Furthermore, below you can find the supported modes:
 <ul>
-LEM         | little-endian mode (default mode)
-ARM         | ARM mode
-16          | 16-bit mode (X86)
-32          | 32-bit mode (X86)
-64          | 64-bit mode (X86, PPC)
-THUMB       | ARM's Thumb mode, including Thumb-2
-MCLASS      | ARM's Cortex-M series
-V8          | ARMv8 A32 encodings for ARM
-V9          | SparcV9 mode (Sparc)
-MICRO       | MicroMips mode (MIPS)
-MIPS3       | Mips III ISA
-MIPS2       | Mips II ISA
-MIPS32R6    | Mips32r6 ISA
-QPX         | Quad Processing eXtensions mode (PPC)
-M68K000     | M68K 68000 mode
-M68K010     | M68K 68010 mode
-M68K020     | M68K 68020 mode
-M68K030     | M68K 68030 mode
-M68K040     | M68K 68040 mode
-M68K060     | M68K 68060 mode
-BEM         | big-endian mode
-MIPS32      | Mips32 ISA (Mips)
-MIPS64      | Mips64 ISA (Mips)
-M680X6301   | M680X Hitachi 6301,6303 mode
-M680X6309   | M680X Hitachi 6309 mode
-M680X6800   | M680X Motorola 6800,6802 mode
-M680X6801   | M680X Motorola 6801,6803 mode
-M680X6805   | M680X Motorola/Freescale 6805 mode
-M680X6808   | M680X Motorola/Freescale/NXP 68HC08 mode
-M680X6809   | M680X Motorola 6809 mode
-M680X6811   | M680X Motorola/Freescale/NXP 68HC11 mode
-M680XCPU12  | M680X Motorola/Freescale/NXP CPU12
-M680XHCS08  | M680X Freescale/NXP HCS08 mode
+  <li>LEM         | little-endian mode (default mode)</li>
+  <li>ARM         | ARM mode</li>
+  <li>16          | 16-bit mode (X86)</li>
+  <li>32          | 32-bit mode (X86)</li>
+  <li>64          | 64-bit mode (X86, PPC)</li>
+  <li>THUMB       | ARM's Thumb mode, including Thumb-2</li>
+  <li>MCLASS      | ARM's Cortex-M series</li>
+  <li>V8          | ARMv8 A32 encodings for ARM</li>
+  <li>V9          | SparcV9 mode (Sparc)</li>
+  <li>MICRO       | MicroMips mode (MIPS)</li>
+  <li>MIPS3       | Mips III ISA</li>
+  <li>MIPS2       | Mips II ISA</li>
+  <li>MIPS32R6    | Mips32r6 ISA</li>
+  <li>QPX         | Quad Processing eXtensions mode (PPC)</li>
+  <li>M68K000     | M68K 68000 mode</li>
+  <li>M68K010     | M68K 68010 mode</li>
+  <li>M68K020     | M68K 68020 mode</li>
+  <li>M68K030     | M68K 68030 mode</li>
+  <li>M68K040     | M68K 68040 mode</li>
+  <li>M68K060     | M68K 68060 mode</li>
+  <li>BEM         | big-endian mode</li>
+  <li>MIPS32      | Mips32 ISA (Mips)</li>
+  <li>MIPS64      | Mips64 ISA (Mips)</li>
+  <li>M680X6301   | M680X Hitachi 6301,6303 mode</li>
+  <li>M680X6309   | M680X Hitachi 6309 mode</li>
+  <li>M680X6800   | M680X Motorola 6800,6802 mode</li>
+  <li>M680X6801   | M680X Motorola 6801,6803 mode</li>
+  <li>M680X6805   | M680X Motorola/Freescale 6805 mode</li>
+  <li>M680X6808   | M680X Motorola/Freescale/NXP 68HC08 mode</li>
+  <li>M680X6809   | M680X Motorola 6809 mode</li>
+  <li>M680X6811   | M680X Motorola/Freescale/NXP 68HC11 mode</li>
+  <li>M680XCPU12  | M680X Motorola/Freescale/NXP CPU12</li>
+  <li>M680XHCS08  | M680X Freescale/NXP HCS08 mode</li>
 </ul>
