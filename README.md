@@ -7,6 +7,7 @@ Please note, a large portion of this utility has not been tested, and some archi
 <h1>Table of Contents</h1>
 <ul>
   <li><a href="#supported">Supported Modes & Architectures</a></li>
+  <li><a href="#help">Help Menu Options {tba}</a></li>
   <li><a href="#screens">Screenshots</a></li>
 </ul>
 <br/><br/>
