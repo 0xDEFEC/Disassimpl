@@ -98,8 +98,8 @@ def parseELF(file_path, arch, mode, out="None"):
             ops = code.data()
             addr = code['sh_addr']
             md = Cs(arch, mode)
-            print() # pretty line break
             if (out == "None"):
+                print() # pretty line break
                 for i in md.disasm(ops, addr):        
                     print("{0: <16}{1: <8}{2}".format(_format_hex(i.address, elf) + ":", i.mnemonic, i.op_str))
             else:
@@ -190,7 +190,7 @@ def display_elf_fh(elf, out):
         except Exception as e:
             print("[Disassimpl][MAIN] - Error {}".format(e))
             return False
-	
+
 # Lazy section info.
 	# Address is spaced 20 times from Offset due to
 	# IA-64 using all 64-bits of its address space
