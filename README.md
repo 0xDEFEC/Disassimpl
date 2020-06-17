@@ -9,6 +9,7 @@ Please note, a large portion of this utility has not been tested, and some archi
   <li><a href="#help">Help Menu Options</a></li>
   <li><a href="#supported">Supported Modes & Architectures</a></li>
   <li><a href="#screens">Screenshots</a></li>
+  <li><a href="#notea">Notes and To-do</a>
 </ul>
 <br/><br/>
 <h1 id="help">Help Menu</h1>
@@ -86,3 +87,18 @@ A view of PE and ELF file structure extractions:
 <br/>
 A view of a disassembled SparcV8 binary:
 <img src="images/sparc_disassemble.PNG">
+<br/><br/>
+<h1 id="notes">Notes and To-do</h1>
+<ul>
+  <li>Notes
+    <ul>
+      <li>All exported files keep their original in-console format.</li>
+    </ul>
+  </li>
+  <li>To-do
+    <ul>
+      <li>Test, test, and test some more.</li>
+      <li>Get some criticism.</li>
+    </ul>
+  </li>
+</ul>
