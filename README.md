@@ -64,6 +64,18 @@ Furthermore, below you can find the supported modes:
   <li>M680XHCS08  | M680X Freescale/NXP HCS08 mode</li>
 </ul>
 <br/><br/>
+<h1 id="help">Help Menu</h1>
+Disassimpl's help menu has various options available in it, even this early in its <i>release</i>. Below you can find a list of its commands that can be found in the help menu (accessed via -h):
+<ul>
+  <li><pre>[-a ARG] -> used to set Disassimpl to a certain architecture during disassembly (default: X86).</pre></li>
+  <li><pre>[-m ARG] -> used to set Disassimpl to a certain mode during disassembly (default: LEM).</pre></li>
+  <li><pre>[-d]     -> used to set Debug mode on; should never need this (unless you want to see cool stuff) (default: off).</pre></li>
+  <li><pre>[-f ARG] -> used to set the full path to the target binary to be disassembled.</pre></li>
+  <li><pre>[-h]     -> used to forcefully display the help menu.</pre></li>
+  <li><pre>[-i]     -> used to set Disassimpl into information mode, rather than disassembly mode (default: off).</pre></li>
+  <li><pre>[-o ARG] -> used to set the path to an output file to save results, if wanted (default: None).</pre></li>
+</ul>
+<br/><br/>
 <h1 id="screens">Screenshots</h1>
 A view of the help menu:
 <img src="images/help_menu.PNG">
