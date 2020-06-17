@@ -189,7 +189,8 @@ def display_elf_fh(elf, out):
         	return False
         except Exception as e:
             print("[Disassimpl][MAIN] - Error {}".format(e))
-
+            return False
+	
 # Lazy section info.
 	# Address is spaced 20 times from Offset due to
 	# IA-64 using all 64-bits of its address space
@@ -214,6 +215,7 @@ def display_elf_sh(elf, out):
         	return False
         except Exception as e:
             print("[Disassimpl][MAIN] - Error {}".format(e))
+            return False
 
 #def display_elf_rl(elf):
 #    print("\n----------RELOCATIONS----------")
