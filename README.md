@@ -12,7 +12,7 @@ Please note, a large portion of this utility has not been tested, and some archi
 </ul>
 <br/><br/>
 <h1 id="help">Help Menu</h1>
-Disassimpl's help menu has various options available in it, even this early in its <i>release</i>. Below you can find a list of its commands that can be found in the help menu (accessed via -h):
+Disassimpl's help menu has various options available in it, even this early in its <i>release</i>. Below you can find a list of its current commands that can be found in the help menu (accessed via -h):
 <br/><br/>
 <pre>[-a ARG]    used to set Disassimpl to a certain architecture during disassembly (default: X86).</pre>
 <pre>[-m ARG]    used to set Disassimpl to a certain mode during disassembly (default: LEM).</pre>
