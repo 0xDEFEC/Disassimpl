@@ -93,7 +93,8 @@ A view of a disassembled SparcV8 binary:
   <li>Notes
     <ul>
       <li>All exported files keep their original in-console format.</li>
-    </ul>
+      <li>No, there is not supposed to be an E at the end of the name.</li>
+   </ul>
   </li>
   <li>To-do
     <ul>
