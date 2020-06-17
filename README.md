@@ -6,10 +6,21 @@ Please note, a large portion of this utility has not been tested, and some archi
 <br/><br/>
 <h1>Table of Contents</h1>
 <ul>
+  <li><a href="#help">Help Menu Options</a></li>
   <li><a href="#supported">Supported Modes & Architectures</a></li>
-  <li><a href="#help">Help Menu Options {tba}</a></li>
   <li><a href="#screens">Screenshots</a></li>
 </ul>
+<br/><br/>
+<h1 id="help">Help Menu</h1>
+Disassimpl's help menu has various options available in it, even this early in its <i>release</i>. Below you can find a list of its commands that can be found in the help menu (accessed via -h):
+<br/><br/>
+<pre>[-a ARG]    used to set Disassimpl to a certain architecture during disassembly (default: X86).</pre>
+<pre>[-m ARG]    used to set Disassimpl to a certain mode during disassembly (default: LEM).</pre>
+<pre>[-d]        used to set Debug mode on; should never need this (unless you want to see cool stuff) (default: off).</pre>
+<pre>[-f ARG]    used to set the full path to the target binary to be disassembled.</pre>
+<pre>[-h]        used to forcefully display the help menu.</pre>
+<pre>[-i]        used to set Disassimpl into information mode, rather than disassembly mode (default: off).</pre>
+<pre>[-o ARG]    used to set the path to an output file to save results, if wanted (default: None).</pre>
 <br/><br/>
 <h1 id="supported">Supported Modes & Architectures</h1>
 As stated above, Disassimpl is supposed to support multiple architectures. Below is the list of supposedly supported architectures:
@@ -63,17 +74,6 @@ Furthermore, below you can find the supported modes:
   <li>M680XCPU12  | M680X Motorola/Freescale/NXP CPU12</li>
   <li>M680XHCS08  | M680X Freescale/NXP HCS08 mode</li>
 </ul>
-<br/><br/>
-<h1 id="help">Help Menu</h1>
-Disassimpl's help menu has various options available in it, even this early in its <i>release</i>. Below you can find a list of its commands that can be found in the help menu (accessed via -h):
-<br/><br/>
-<pre>[-a ARG]    used to set Disassimpl to a certain architecture during disassembly (default: X86).</pre>
-<pre>[-m ARG]    used to set Disassimpl to a certain mode during disassembly (default: LEM).</pre>
-<pre>[-d]        used to set Debug mode on; should never need this (unless you want to see cool stuff) (default: off).</pre>
-<pre>[-f ARG]    used to set the full path to the target binary to be disassembled.</pre>
-<pre>[-h]        used to forcefully display the help menu.</pre>
-<pre>[-i]        used to set Disassimpl into information mode, rather than disassembly mode (default: off).</pre>
-<pre>[-o ARG]    used to set the path to an output file to save results, if wanted (default: None).</pre>
 <br/><br/>
 <h1 id="screens">Screenshots</h1>
 A view of the help menu:
