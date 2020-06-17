@@ -9,7 +9,7 @@ Please note, a large portion of this utility has not been tested, and some archi
   <li><a href="#help">Help Menu Options</a></li>
   <li><a href="#supported">Supported Modes & Architectures</a></li>
   <li><a href="#screens">Screenshots</a></li>
-  <li><a href="#notea">Notes and To-do</a>
+  <li><a href="#notes">Notes and To-do</a>
 </ul>
 <br/><br/>
 <h1 id="help">Help Menu</h1>
