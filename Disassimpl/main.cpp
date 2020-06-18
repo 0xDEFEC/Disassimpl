@@ -63,58 +63,58 @@ void cs_init(D_IN std::string& arch, D_IN std::string& mode, D_OUT uint16_t& arc
 	// parse -a cli arg and set appropriate value to arch_buffer
 	if (!infoMode) { // no need to set nor print if in infoMode
 		switch (parseArch(arch)) {
-		case 0:         arch_buffer = ARCH_ARM;        arch = "ARM";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 1:         arch_buffer = ARCH_ARM64;      arch = "ARM64";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 2:         arch_buffer = ARCH_MIPS;       arch = "MIPS";       std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 3:         arch_buffer = ARCH_X86;        arch = "X86";        std::cout << "[Disassimpl][ARCH] - Using default " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 4:         arch_buffer = ARCH_PPC;        arch = "PPC";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 5:         arch_buffer = ARCH_SPARC;      arch = "SPARC";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 6:         arch_buffer = ARCH_SYSZ;       arch = "SYSZ";       std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 7:         arch_buffer = ARCH_XCORE;      arch = "XCORE";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 8:         arch_buffer = ARCH_M68K;       arch = "M68K";       std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 9:			arch_buffer = ARCH_TMS320C64X; arch = "TMS320C64X"; std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 10:        arch_buffer = ARCH_M680X;      arch = "M680X";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 11:        arch_buffer = ARCH_EVM;        arch = "EVM";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-		case 0xFFFF:    arch_buffer = ARCH_ALL;        arch = "ALL";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 0:         arch_buffer = ARCH_ARM;        arch = "ARM";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 1:         arch_buffer = ARCH_ARM64;      arch = "ARM64";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 2:         arch_buffer = ARCH_MIPS;       arch = "MIPS";       std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 3:         arch_buffer = ARCH_X86;        arch = "X86";        std::cout << "[Disassimpl][ARCH] - Using default " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 4:         arch_buffer = ARCH_PPC;        arch = "PPC";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 5:         arch_buffer = ARCH_SPARC;      arch = "SPARC";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 6:         arch_buffer = ARCH_SYSZ;       arch = "SYSZ";       std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 7:         arch_buffer = ARCH_XCORE;      arch = "XCORE";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+//			case 8:         arch_buffer = ARCH_M68K;       arch = "M68K";       std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break; removed
+//			case 9:			arch_buffer = ARCH_TMS320C64X; arch = "TMS320C64X"; std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break; removed
+//			case 10:        arch_buffer = ARCH_M680X;      arch = "M680X";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break; removed
+			case 11:        arch_buffer = ARCH_EVM;        arch = "EVM";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+			case 0xFFFF:    arch_buffer = ARCH_ALL;        arch = "ALL";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
 		}
 	}
 
 	// parse -m cli arg and set appropriate value to mode_buffer
 	if (!infoMode) {
 		switch (parseMode(mode)) {
-		case 0:         mode_buffer = MODE_LITTLE_ENDIAN;  mode = "LEM";        std::cout << "[Disassimpl][MODE] - Using default " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 1:         mode_buffer = MODE_ARM;			   mode = "ARM";        std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 2:			mode_buffer = MODE_16;             mode = "16-bit";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 3:         mode_buffer = MODE_32;             mode = "32-bit";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 4:         mode_buffer = MODE_64;             mode = "64-bit";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 5:         mode_buffer = MODE_THUMB;          mode = "THUMB";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 6:         mode_buffer = MODE_MCLASS;         mode = "MCLASS";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 7:         mode_buffer = MODE_V8;             mode = "V8";         std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 8:         mode_buffer = MODE_V9;             mode = "V9";         std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 9:         mode_buffer = MODE_MICRO;          mode = "MICRO";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 10:        mode_buffer = MODE_MIPS3;          mode = "MIPS3";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 11:        mode_buffer = MODE_MIPS2;          mode = "MIPS2";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 12:        mode_buffer = MODE_MIPS32R6;       mode = "MIPS32R6";   std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 13:        mode_buffer = MODE_QPX;            mode = "QPX";        std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 14:        mode_buffer = MODE_M68K_000;       mode = "M68K000";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 15:        mode_buffer = MODE_M68K_010;       mode = "M68K010";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 16:        mode_buffer = MODE_M68K_020;       mode = "M68K020";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 17:        mode_buffer = MODE_M68K_030;       mode = "M68K030";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 18:        mode_buffer = MODE_M68K_040;       mode = "M68K040";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 19:        mode_buffer = MODE_M68K_060;       mode = "M68K060";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 20:        mode_buffer = MODE_BIG_ENDIAN;     mode = "BEM";        std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 21:        mode_buffer = MODE_MIPS32;         mode = "MIPS32";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 22:        mode_buffer = MODE_MIPS64;         mode = "MIPS64";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 23:        mode_buffer = MODE_M680X_6301;     mode = "M680X6301";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 24:		mode_buffer = MODE_M680X_6309;     mode = "M680X6309";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 25:		mode_buffer = MODE_M680X_6800;     mode = "M680X6800";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 26:		mode_buffer = MODE_M680X_6801;     mode = "M680X6801";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 27:		mode_buffer = MODE_M680X_6805;     mode = "M680X6805";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 28:		mode_buffer = MODE_M680X_6808;     mode = "M680X6808";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 29:		mode_buffer = MODE_M680X_6809;     mode = "M680X6809";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 30:		mode_buffer = MODE_M680X_6811;     mode = "M680X6811";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 31:		mode_buffer = MODE_M680X_CPU12;    mode = "M680XCPU12"; std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
-		case 32:		mode_buffer = MODE_M680X_HCS08;    mode = "M680XHCS08"; std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 0:         mode_buffer = MODE_LITTLE_ENDIAN;  mode = "LEM";        std::cout << "[Disassimpl][MODE] - Using default " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 1:         mode_buffer = MODE_ARM;			   mode = "ARM";        std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 2:			mode_buffer = MODE_16;             mode = "16-bit";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 3:         mode_buffer = MODE_32;             mode = "32-bit";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 4:         mode_buffer = MODE_64;             mode = "64-bit";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 5:         mode_buffer = MODE_THUMB;          mode = "THUMB";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 6:         mode_buffer = MODE_MCLASS;         mode = "MCLASS";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 7:         mode_buffer = MODE_V8;             mode = "V8";         std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 8:         mode_buffer = MODE_V9;             mode = "V9";         std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 9:         mode_buffer = MODE_MICRO;          mode = "MICRO";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 10:        mode_buffer = MODE_MIPS3;          mode = "MIPS3";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 11:        mode_buffer = MODE_MIPS2;          mode = "MIPS2";      std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 12:        mode_buffer = MODE_MIPS32R6;       mode = "MIPS32R6";   std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 13:        mode_buffer = MODE_QPX;            mode = "QPX";        std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+//			case 14:        mode_buffer = MODE_M68K_000;       mode = "M68K000";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 15:        mode_buffer = MODE_M68K_010;       mode = "M68K010";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 16:        mode_buffer = MODE_M68K_020;       mode = "M68K020";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 17:        mode_buffer = MODE_M68K_030;       mode = "M68K030";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 18:        mode_buffer = MODE_M68K_040;       mode = "M68K040";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 19:        mode_buffer = MODE_M68K_060;       mode = "M68K060";    std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+			case 20:        mode_buffer = MODE_BIG_ENDIAN;     mode = "BEM";        std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 21:        mode_buffer = MODE_MIPS32;         mode = "MIPS32";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+			case 22:        mode_buffer = MODE_MIPS64;         mode = "MIPS64";     std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break;
+//			case 23:        mode_buffer = MODE_M680X_6301;     mode = "M680X6301";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 24:		mode_buffer = MODE_M680X_6309;     mode = "M680X6309";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 25:		mode_buffer = MODE_M680X_6800;     mode = "M680X6800";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 26:		mode_buffer = MODE_M680X_6801;     mode = "M680X6801";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 27:		mode_buffer = MODE_M680X_6805;     mode = "M680X6805";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 28:		mode_buffer = MODE_M680X_6808;     mode = "M680X6808";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 29:		mode_buffer = MODE_M680X_6809;     mode = "M680X6809";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 30:		mode_buffer = MODE_M680X_6811;     mode = "M680X6811";  std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 31:		mode_buffer = MODE_M680X_CPU12;    mode = "M680XCPU12"; std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
+//			case 32:		mode_buffer = MODE_M680X_HCS08;    mode = "M680XHCS08"; std::cout << "[Disassimpl][MODE] - Using " << mode << " (code " << mode_buffer << ")" << std::endl; break; removed
 		}
 	}
 
