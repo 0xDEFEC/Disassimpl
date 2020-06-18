@@ -59,7 +59,7 @@ Furthermore, below you can find the supported modes:
 <br/><br/>
 <h1 id="screens">Screenshots</h1>
 A view of the help menu:
-<img src="images/help_menu.PNG">
+<img src="images/dis_help_menu.PNG">
 <br/>
 A view of PE and ELF file structure extractions:
 <img src="images/file_extract_top.PNG">
