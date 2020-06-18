@@ -10,11 +10,11 @@ using namespace ez;
 #define D_IN    // for in params  -> DISASSIMPL_IN
 #define D_OUT   // for out params -> DISASSIMPL_OUT
 
-ezOptionParser ez_init(int argc, const char* argv[]); void printUsage(ezOptionParser& opt);
+ezOptionParser ez_init(int argc, const char* argv[]); void printUsage(D_IN ezOptionParser& opt);
 void cs_init(D_IN std::string& arch, D_IN std::string& mode, D_OUT uint16_t& archBuffer, D_OUT int32_t& modeBuffer, D_IN bool debug, D_IN bool infoMode, D_IN std::string filePath, D_IN std::string outfile);
-bool importHandler(PyObject** moduleBuffer, const char* modName); // used to import DisassimplHandler.py as a module
-bool importSymbols(PyObject* module, const char* symbol, PyObject** symbolBuffer); // used for importing the necessary functions
-bool callSymbol(PyObject* symbol, PyObject* pyTupleArgs);
+bool importHandler(D_OUT PyObject** moduleBuffer, D_IN const char* modName); // used to import DisassimplHandler.py as a module
+bool importSymbols(D_IN PyObject* module, D_IN const char* symbol, D_OUT PyObject** symbolBuffer); // used for importing the necessary functions
+bool callSymbol(D_IN PyObject* symbol, D_IN PyObject* pyTupleArgs);
 
 // globals - hold output from cs_init for it to be sent the Py-side
 uint16_t arch_buffer;
@@ -206,14 +206,14 @@ ezOptionParser ez_init(int argc, const char* argv[]) {
 }
 
 // helper function to print help message
-void printUsage(ezOptionParser& opt) {
+void printUsage(D_IN ezOptionParser& opt) {
 	std::string usage;
 	opt.getUsage(usage);
 	std::cout << usage;
 }
 
 // Python functions all below - PyErr_Print() fills the Disassimpl error dialogue following the hyphen if an error occurs
-bool importHandler(PyObject** moduleBuffer, const char* modName) {
+bool importHandler(D_OUT PyObject** moduleBuffer, D_IN const char* modName) {
 	*moduleBuffer = PyImport_ImportModule(modName);
 	if (!moduleBuffer) {
 		printf("[Disassimpl][MAIN] - "); PyErr_Print();
@@ -222,7 +222,7 @@ bool importHandler(PyObject** moduleBuffer, const char* modName) {
 	else {
 		return true;
 	}
-} bool importSymbols(PyObject* module, const char* symbol, PyObject** symbolBuffer) {
+} bool importSymbols(D_IN PyObject* module, D_IN const char* symbol, D_OUT PyObject** symbolBuffer) {
 	*symbolBuffer = PyObject_GetAttrString(module, symbol);
 	if (!symbolBuffer) {
 		printf("[Disassimpl][MAIN] - "); PyErr_Print();
@@ -231,7 +231,7 @@ bool importHandler(PyObject** moduleBuffer, const char* modName) {
 	else {
 		return true;
 	}
-} bool callSymbol(PyObject* symbol, PyObject* pyTupleArgs) {
+} bool callSymbol(D_IN PyObject* symbol, D_IN PyObject* pyTupleArgs) {
 	if (!PyObject_CallObject(symbol, pyTupleArgs)) {
 		printf("[Disassimpl][MAIN] - "); PyErr_Print();
 		return false;
