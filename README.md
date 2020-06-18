@@ -75,7 +75,6 @@ A view of a disassembled SparcV8 binary:
     <ul>
       <li>All exported files keep their original in-console format.</li>
       <li>No, there is not supposed to be an E at the end of the name.</li>
-      <li>This hasn't been built on Linux, but it <i>should</i> build fine. No promises.</li>
    </ul>
   </li>
   <li>To-do
