@@ -82,7 +82,6 @@ A view of a disassembled SparcV8 binary:
     <ul>
       <li>Test, test, and test some more.</li>
       <li>Get some criticism.</li>
-      <li>Remove support for M680X, M68K, TMS320C64X.</li>
     </ul>
   </li>
 </ul>
