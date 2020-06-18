@@ -34,9 +34,6 @@ As stated above, Disassimpl is supposed to support multiple architectures. Below
   <li>SPARC       | Sparc architecture</li>
   <li>SYSZ        | SystemZ architecture</li>
   <li>XCORE       | XCore architecture</li>
-  <li>M68K        | 68K architecture</li>
-  <li>TMS320C64X  | TMS320C64x architecture</li>
-  <li>M680X       | 680X architecture</li>
   <li>EVM         | Ethereum architecture</li>
 </ul>
 Furthermore, below you can find the supported modes:
@@ -55,25 +52,9 @@ Furthermore, below you can find the supported modes:
   <li>MIPS2       | Mips II ISA</li>
   <li>MIPS32R6    | Mips32r6 ISA</li>
   <li>QPX         | Quad Processing eXtensions mode (PPC)</li>
-  <li>M68K000     | M68K 68000 mode</li>
-  <li>M68K010     | M68K 68010 mode</li>
-  <li>M68K020     | M68K 68020 mode</li>
-  <li>M68K030     | M68K 68030 mode</li>
-  <li>M68K040     | M68K 68040 mode</li>
-  <li>M68K060     | M68K 68060 mode</li>
   <li>BEM         | big-endian mode</li>
   <li>MIPS32      | Mips32 ISA (Mips)</li>
   <li>MIPS64      | Mips64 ISA (Mips)</li>
-  <li>M680X6301   | M680X Hitachi 6301,6303 mode</li>
-  <li>M680X6309   | M680X Hitachi 6309 mode</li>
-  <li>M680X6800   | M680X Motorola 6800,6802 mode</li>
-  <li>M680X6801   | M680X Motorola 6801,6803 mode</li>
-  <li>M680X6805   | M680X Motorola/Freescale 6805 mode</li>
-  <li>M680X6808   | M680X Motorola/Freescale/NXP 68HC08 mode</li>
-  <li>M680X6809   | M680X Motorola 6809 mode</li>
-  <li>M680X6811   | M680X Motorola/Freescale/NXP 68HC11 mode</li>
-  <li>M680XCPU12  | M680X Motorola/Freescale/NXP CPU12</li>
-  <li>M680XHCS08  | M680X Freescale/NXP HCS08 mode</li>
 </ul>
 <br/><br/>
 <h1 id="screens">Screenshots</h1>
