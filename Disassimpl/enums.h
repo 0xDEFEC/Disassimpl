@@ -26,8 +26,8 @@ enum arch_options {
 //	ARCH_M680X,        removed
 	ARCH_EVM = 11,
 	// ARCH_MAX -> don't know wtf ARCH_MAX is - it isn't in the CS C API, so... not gonna use it
-	ARCH_ALL = 0xFFFF
-}; uint16_t parseArch(std::string arch) {
+//	ARCH_ALL = 0xFFFF
+}; uint8_t parseArch(std::string arch) {
 	if (arch == "ARM")        { return 0;      }
 	if (arch == "ARM64")      { return 1;      }
 	if (arch == "MIPS")       { return 2;      }
@@ -40,7 +40,7 @@ enum arch_options {
 //	if (arch == "TMS320C64X") { return 9;      } removed
 //	if (arch == "M680X")      { return 10;     } removed
 	if (arch == "EVM")        { return 11;     }
-	if (arch == "ALL")        { return 0xFFFF; }
+//	if (arch == "ALL")        { return 0xFFFF; }
 	else                      { return 3;      } // default to X86
 }
 
@@ -148,5 +148,4 @@ Available architectures:
 	SPARC       | Sparc architecture
 	SYSZ        | SystemZ architecture
 	XCORE       | XCore architecture
-	EVM         | Ethereum architecture
-	ALL         | All architectures)V0G0N";
+	EVM         | Ethereum architecture)V0G0N";

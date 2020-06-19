@@ -75,7 +75,7 @@ void cs_init(D_IN std::string& arch, D_IN std::string& mode, D_OUT uint16_t& arc
 //			case 9:			arch_buffer = ARCH_TMS320C64X; arch = "TMS320C64X"; std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break; removed
 //			case 10:        arch_buffer = ARCH_M680X;      arch = "M680X";      std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break; removed
 			case 11:        arch_buffer = ARCH_EVM;        arch = "EVM";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
-			case 0xFFFF:    arch_buffer = ARCH_ALL;        arch = "ALL";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
+//			case 0xFFFF:    arch_buffer = ARCH_ALL;        arch = "ALL";        std::cout << "[Disassimpl][ARCH] - Using " << arch << " (code " << arch_buffer << ")" << std::endl; break;
 		}
 	}
 
