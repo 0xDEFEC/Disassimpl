@@ -28,7 +28,7 @@ int main(int argc, const char *argv[]) {
 	#endif
 
 	ezOptionParser opt = ez_init(argc, argv);
-	std::cout << "      [Disassimpl] :: a simple disassembly utility by Mr. 0xDEFEC\n-----------------------------------------------------------------------\n" << std::endl;
+	std::cout << "      [Disassimpl] :: a simple disassembly utility by Mr. D7EAD\n-----------------------------------------------------------------------\n" << std::endl;
 	std::string filePath;                 opt.get("-f")->getString(filePath); // check for existence in ez_init()
 	std::string arch = "X86";             opt.get("-a")->getString(arch); // has default value X86
 	std::string mode = "LEM";             opt.get("-m")->getString(mode); // has default value as LEM
@@ -175,7 +175,7 @@ void cs_init(D_IN std::string& arch, D_IN std::string& mode, D_OUT uint16_t& arc
 // performs check to see if an input file is detected - every other check is done in main()
 ezOptionParser ez_init(int argc, const char* argv[]) {
 	ezOptionParser ezop;
-	ezop.overview = "[Disassimpl] :: a somewhat simple disassembly utility by 0xDEFEC";
+	ezop.overview = "[Disassimpl] :: a somewhat simple disassembly utility by D7EAD";
 	ezop.syntax = "(./)Disassimpl(.exe) [OPTIONS...] -f [FILEPATH]";
 	ezop.example = "[WIN32]\nDisassimpl.exe -f C:\\somebinary.exe -m 64 -a X86\nDisassimpl.exe -f C:\\somebinary.exe\n\n[LINUX]\n./Disassimpl -f /home/user/somebinary -m 64 -a X86\n./Disassimpl -f /home/user/somebinary";
 	ezop.add(
